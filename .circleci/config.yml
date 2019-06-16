@@ -27,7 +27,7 @@ jobs:
             git branch -a
             # git checkout trunk
             # 18 01 2018
-            # git checkout 09c6bfa
+            git checkout 09c6bfa
             ls -la
             mkdir bin
             cd bin

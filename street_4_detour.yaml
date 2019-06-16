@@ -1,10 +1,10 @@
 # this route should be ~550 kms
 from:
-  lat: 49.442424448549
-  lng: 1.0984600731081
+  lat: 49.44242
+  lng: 1.09847
 to:
-  lat: 45.910316809296
-  lng: -1.2646626288661
+  lat: 45.91026
+  lng: -1.26470
 success:
     source: 'dbus'
     item: 'distance'

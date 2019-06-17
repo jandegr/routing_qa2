@@ -60,8 +60,10 @@ jobs:
           command: |
             cd navit/bin/navit
             # mkdir maps
-            echo '<map type="binfile" data="maps/BFR.bin" />' > maps/BFR.xml
-            wget -c -O maps/BFR.bin https://3572-34103839-gh.circle-artifacts.com/0/root/project/BFR.bin
+            echo '<map type="binfile" data="maps/BFRL.bin" />' > maps/BFRL.xml
+            wget -c -O maps/BFRLab.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLab
+            wget -c -O maps/BFRLaa.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLaa
+            cat maps/BFRLaa.bin maps/BFRLab.bin > maps/BFRL.bin
       - run:
           name: Running X virtual framebuffer
           command: |

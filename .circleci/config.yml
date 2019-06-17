@@ -26,8 +26,6 @@ jobs:
             cd navit
             git branch -a
             git checkout FPDBG
-            # 15 05 2018
-            # git checkout d6e6f53
             ls -la
             mkdir bin
             cd bin

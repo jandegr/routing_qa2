@@ -1,8 +1,8 @@
 # go over the roundabout to proceed to the ramp
 # to respect the turn restriction
 from:
-    lat: 47.204224
-    lng: 2.034730
+    lat: 47.20368
+    lng: 2.03624
 to:
     lat: 47.203953
     lng: 2.034392

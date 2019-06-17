@@ -1,10 +1,10 @@
 # Merelbeke U turn over the roundabout
 from:
-  lat: 51.0005
-  lng: 3.7354
+  lat: 51.00054
+  lng: 3.73540
 to:
-  lat: 50.9985
-  lng: 3.7434
+  lat: 50.99858
+  lng: 3.74354
 
 success:
     source: 'dbus'

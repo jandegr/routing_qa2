@@ -25,7 +25,7 @@ jobs:
             git clone https://github.com/jandegr/navit.git
             cd navit
             git branch -a
-            git checkout trunk
+            # git checkout trunk
             ls -la
             mkdir bin
             cd bin
@@ -58,12 +58,12 @@ jobs:
           command: |
             cd navit/bin/navit
             # mkdir maps
-            # echo '<map type="binfile" data="maps/BFRL.bin" />' > maps/BFRL.xml
-            # wget -c -O maps/BFRLab.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLab
-            # wget -c -O maps/BFRLaa.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLaa
-            # cat maps/BFRLaa.bin maps/BFRLab.bin > maps/BFRL.bin
-            echo '<map type="binfile" data="maps/europe.bin" />' > maps/europe.xml
-            wget -O maps/europe.bin http://maps.navit-project.org/api/map/?bbox=-7.0,40.9,17.0,59.5.bin
+            echo '<map type="binfile" data="maps/BFRL.bin" />' > maps/BFRL.xml
+            wget -c -O maps/BFRLab.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLab
+            wget -c -O maps/BFRLaa.bin https://3782-34103839-gh.circle-artifacts.com/0/root/project/out/BFRLaa
+            cat maps/BFRLaa.bin maps/BFRLab.bin > maps/BFRL.bin
+            # echo '<map type="binfile" data="maps/europe.bin" />' > maps/europe.xml
+            # wget -O maps/europe.bin http://maps.navit-project.org/api/map/?bbox=-7.0,40.9,17.0,59.5.bin
       - run:
           name: Running X virtual framebuffer
           command: |

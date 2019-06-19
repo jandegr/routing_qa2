@@ -71,7 +71,9 @@ jobs:
           background: true
       - run:
           name: Check screen
-          command: xrandr
+          command: |
+            export DISPLAY=:99
+            xrandr
       - run:
          name: Start Navit
          command: |

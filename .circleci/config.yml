@@ -3,7 +3,7 @@ defaults: &defaults
   docker:
     - image: ubuntu:19.04
 jobs:
-  build_linux:
+  build_linux_and_test:
     <<: *defaults
     steps:
       - checkout
@@ -54,7 +54,7 @@ jobs:
             cd navit/bin/navit
             cat navit.xml
       - run:
-          name: get map BFR
+          name: get map
           command: |
             cd navit/bin/navit
             # mkdir maps
@@ -68,8 +68,10 @@ jobs:
           name: Running X virtual framebuffer
           command: |
             Xvfb -ac :99 -screen 0 1280x1024x16
-            xrandr
           background: true
+       - run:
+          name: Check screen
+          command: xrandr
       - run:
          name: Start Navit
          command: |
@@ -98,4 +100,4 @@ workflows:
   version: 2
   build_all:
     jobs:
-      - build_linux
+      - build_linux_and_test

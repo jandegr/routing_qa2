@@ -19,6 +19,7 @@ jobs:
             apt-get install -y imagemagick
             # apt-get install -y gdb
             apt-get install -y dbus dbus-x11 python-yaml python-junit.xml python-dbus python-lxml python-gobject
+            xrandr
       - run:
           name: Build for Linux
           command: |
@@ -68,6 +69,7 @@ jobs:
           name: Running X virtual framebuffer
           command: |
             Xvfb -ac :99 -screen 0 1280x1024x16
+            xrandr
           background: true
       - run:
          name: Start Navit

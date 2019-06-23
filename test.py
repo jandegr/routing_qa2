@@ -40,7 +40,8 @@ if not os.path.exists(junit_directory):
 export_suffix=sys.argv[3]
 
 tests=[]
-for filename in glob.glob('*.yaml'):
+files = glob.glob('*.yaml')
+for filename in files:
     f = open(filename)
     dataMap = yaml.safe_load(f)
     f.close()

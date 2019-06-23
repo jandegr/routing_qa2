@@ -102,7 +102,7 @@ for filename in files:
                 test_cases.add_failure_info('navigation items count mismatch [ got ' + \
                     str(rtept_count) + ", expected " + dataMap['success']['operator'] + str(dataMap['success']['value']) ) 
         elif dataMap['success']['source'] == 'dbus' :
-            if not(eval(dataMap['success']['item'] + dataMap['success']['operator'] + str(dataMap['success']['value']))):
+            if not(eval(int(dataMap['success']['item']) + dataMap['success']['operator'] + int(str(dataMap['success']['value'])))):
                 test_cases.add_failure_info('dbus result mismatch [ got ' + \
                     str(eval(str(dataMap['success']['item']))) + dataMap['success']['operator'] + str(dataMap['success']['value']) )
     except:

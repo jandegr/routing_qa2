@@ -56,7 +56,7 @@ for filename in glob.glob('*.yaml'):
         # FIXME : we should listen to a dbus signal notifying that the routing is complete instead
         timeout=120
         status=-1
-        while timeout>0 and ( status!=33 ):
+        while timeout>0 and ( status!=33 and status!=17):
             try:
                status=route.get_attr("route_status")[1]
                distance=route.get_attr("destination_length")[1]
@@ -64,6 +64,15 @@ for filename in glob.glob('*.yaml'):
             except:
                time.sleep(1)
             timeout-=1
+        # we already have a route, now make sure it has been updated
+        while timeout>0 and ( status!=33 ):
+            status=route.get_attr("route_status")[1]
+            distance=route.get_attr("destination_length")[1]
+            if status == 33 :
+                print "Route status : "+str(status)+", distance : "+str(distance)+ ", duration : "+str(time.time() - start_time)
+            else :
+                time.sleep(1)
+                timeout-=1
         if timeout>0 :
             navit.export_as_gpx(gpx_directory+"/"+filename + export_suffix + ".gpx")
             navit.export_as_geojson(gpx_directory+"/"+filename + export_suffix + ".geojson")

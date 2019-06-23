@@ -1,7 +1,7 @@
-# nothing special, but fails in Zanavi 2.49
+# 
 from:
-  lat: 50.97305
-  lng: 3.54751
+  lat: 49.8721
+  lng: 3.2422
 to:
   lat: 43.12073
   lng: 5.93123

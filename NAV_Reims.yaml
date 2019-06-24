@@ -1,0 +1,13 @@
+# no instrucion required
+from:
+  lat: 49.2482
+  lng: 3.9607
+to:
+  lat: 49.2410
+  lng: 3.9671
+
+success:
+    source: 'dbus'
+    item: 'status'
+    value: 17
+operator: '>'

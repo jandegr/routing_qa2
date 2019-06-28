@@ -22,6 +22,7 @@ jobs:
       - run:
           name: Build for Linux
           command: |
+            xwininfo
             git clone https://github.com/jandegr/navit.git
             cd navit
             git branch -a
@@ -73,6 +74,7 @@ jobs:
          name: Start Navit
          command: |
            export DISPLAY=:99
+           xwininfo
            sleep 3
            cd navit/bin/navit
            #Xvfb

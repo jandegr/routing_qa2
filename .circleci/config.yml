@@ -67,7 +67,7 @@ jobs:
       - run:
           name: Running X virtual framebuffer
           command: |
-            Xvfb -ac :99
+            Xvfb :99 -screen 1 1280x1024x24
           background: true
       - run:
          name: Start Navit
